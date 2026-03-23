@@ -307,6 +307,7 @@
   .c-dim    { color: #4a4a4a; }
   .c-green  { color: #8ec07c; }
   .c-text   { color: var(--text); }
+  .code-body { font-family: monospace; font-size: 0.78rem; line-height: 1.8; }
 
   /* ── Footer ── */
   footer {
@@ -482,24 +483,20 @@
         </div>
         <div class="code-block">
           <span class="code-label before">your_sim.py</span>
-          <div class="code-body before">
-<span class="c-dim">def</span> <span class="c-text">run_ode(t, y, params):</span>
-<span class="c-text">    dydt = params[0] * y[0]</span>
-<span class="c-text">    ...</span>
-<span class="c-text">    return dydt</span>
-          </div>
+          <pre class="code-body before"><span class="c-text">def run_ode(t, y, params):
+    dydt = params[0] * y[0]
+    ...
+    return dydt</span></pre>
           <div class="code-arrow">save &darr;</div>
           <span class="code-label after">.forge/run_ode.c — generated</span>
-          <div class="code-body after">
-<span class="c-green">// equivalence: PASSED (1024 cases)</span>
-<span class="c-green">// speedup:     8.3x</span>
+          <pre class="code-body after"><span class="c-green">// equivalence: PASSED (1024 cases)
+// speedup:     8.3x</span>
 
-<span class="c-dim">double</span> <span class="c-text">run_ode(double t,</span>
-<span class="c-text">               double* y,</span>
-<span class="c-text">               double* params) {</span>
-<span class="c-text">    ...</span>
-<span class="c-text">}</span>
-          </div>
+<span class="c-text">double run_ode(double t,
+               double* y,
+               double* params) {
+    ...
+}</span></pre>
         </div>
       </div>
     </div>
