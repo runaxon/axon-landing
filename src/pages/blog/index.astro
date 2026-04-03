@@ -37,6 +37,10 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
   .post-item:hover .post-title { color: var(--accent); transform: scale(1.02); }
   .post-desc { color: var(--muted); font-size: 0.875rem; line-height: 1.6; }
   .post-date { font-family: monospace; font-size: 0.75rem; color: var(--muted); white-space: nowrap; padding-top: 0.2rem; }
+  @media (max-width: 600px) {
+    .post-item { grid-template-columns: 1fr auto; }
+    .post-thumb { display: none; }
+  }
   footer { border-top: 1px solid var(--border); padding: 2rem; color: var(--muted); font-size: 0.78rem; }
   .footer-inner { max-width: 860px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
   footer a { color: var(--muted); text-decoration: none; }
