@@ -11,7 +11,19 @@ next:
 
 ---
 
-Here is a concrete problem. A patient is given a drug. At any moment in time, that drug is distributed across three compartments in their body: the bloodstream (central compartment), a fast-equilibrating peripheral tissue, and a slow-equilibrating peripheral tissue.
+A patient is given a drug. **Where does it go?**
+
+If the drug is infused directly into the blood (the scientific term is plasma), it doesn't stay there.
+
+It moves around; from plasma into tissues, into the brain, into organs, until it is eventually cleared from the body.
+All of the different places a drug can be, we call **compartments**. Each **compartment** can have its own model.
+
+
+To ground the discussions of this chapter, let's clearly define a common set of 3-compartments.
+     - **Compartment 1:** Plasma (AKA circulating blood) 
+     - **Compartment 2:** Fast Tissues (rapidly equilibrating tissues such as heart, lungs, kidneys, liver where blood flow is high, so drug moves in and out quickly)
+     - **Compartment 3:** Slow Tissues (slowly equilibrating tissues such as muscle, fat, and skin where blood flow is low, so drug seeps in gradually)
+
 
 At time $t$, the state of the system is fully described by three numbers:
 
