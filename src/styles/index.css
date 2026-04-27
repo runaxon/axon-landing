@@ -71,8 +71,30 @@ textarea { resize: vertical; min-height: 80px; }
 .form-note { font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 0.75rem; }
 .discord-btn { margin-top: 1rem; padding: 0.9rem 2.5rem; font-size: 1rem; }
 .screenshot-section { padding: 2.5rem 0 4rem; }
-.screenshot-wrapper { border: 1px solid var(--border); background: var(--surface); }
-.screenshot-label { font-family: monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0.5rem 0.85rem; border-bottom: 1px solid var(--border); }
+.screenshot-wrapper { 
+  border-radius: 10px; 
+  border: 1px solid rgba(76, 167, 158, 1); 
+  background: #0a0a0f; 
+  filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.1));
+  
+  /* Applying the Animation */
+  animation: pulse-glow 12s ease-in-out infinite;
+}
+/* 3. Define the Animation Keyframes */
+@keyframes pulse-glow {
+  0% {
+    filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.0));
+  }
+  50% {
+    /* At the peak, the glow is slightly brighter and wider */
+    filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.2));
+  }
+  100% {
+    /* Return to the initial state */
+    filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.0));
+  }
+}
+.screenshot-label { font-family: monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #50b1a7; padding: 0.5rem 0.85rem; border-bottom: 1px solid var(--border); }
 .screenshot { width: 100%; display: block; }
 .myelin { padding: 3.5rem 0; border-top: 1px solid var(--border); }
 .myelin-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 1.5rem; align-items: center; }
